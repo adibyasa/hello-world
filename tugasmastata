@@ -1,0 +1,85 @@
+<html>
+   <head>
+      <title>Online PHP Script Execution</title>      
+   </head>
+   
+   <body>
+      
+      <?php
+    $array = array(-2, 100, 25, 15, 1, 2, 3, 7, 9, 11, 24, 42, 96, 69, -8);
+    sort($array); ///setelah di sort, variabel langsung teratur
+    
+    $alength = count($array);
+    for($x = 0; $x < $alength; $x++) {
+        echo "$array[$x], ";
+        ///echo "<br>";
+    }
+    echo "<br>";
+    echo "<br>";
+    echo "<br>";
+    
+    foreach ($array as $a){
+        if($a < 0){
+            echo "$a ini adalah bilangan negatif <br>";            
+        }elseif($a % 5 == 0){
+            echo "$a ini bilangan kelipatan 5 <br>";
+        }elseif($a % 2 == 0){
+            echo "$a ini bilangan kelipatan 2 <br>";
+        
+      }
+    }
+    
+    function bilanganNegatif(){
+        $array = array(-2, 100, 25, 15, 1, 2, 3, 7, 9, 11, 24, 42, 96, 69, -8);
+        sort($array);
+        $alength = count($array);
+        for($x = 0; $x < $alength; $x++) {
+            if ($array[$x] < 0) {
+                echo "$array[$x], ";
+            }
+        }
+    }
+    
+    function kelipatanLima(){
+        $array = array(-2, 100, 25, 15, 1, 2, 3, 7, 9, 11, 24, 42, 96, 69, -8);
+        sort($array);
+        $alength = count($array);
+        for($x = 0; $x < $alength; $x++) {
+            if ($array[$x] % 5 == 0) {
+                echo "$array[$x], ";
+            }
+        }
+    }
+    
+    function kelipatanDua(){
+        $array = array(-2, 100, 25, 15, 1, 2, 3, 7, 9, 11, 24, 42, 96, 69, -8);
+        sort($array);
+        $alength = count($array);
+        for($x = 0; $x < $alength; $x++) {
+            if ($array[$x] % 2 == 0) {
+                echo "$array[$x], ";;
+            }
+        }
+    }
+  
+    echo "<br>";
+    echo "<br>";
+
+    echo "bilangan negatif adalah : ";
+    bilanganNegatif();
+    echo "<br>";
+
+    echo "bilangan dengan kelipatan 5 adalah : ";
+    kelipatanLima();
+    echo "<br>";
+
+    echo "bilangan dengan kelipatan 2 adalah : ";
+    kelipatanDua();
+    echo "<br>";
+
+    
+    
+      ?>
+   
+   </body>
+</html>
